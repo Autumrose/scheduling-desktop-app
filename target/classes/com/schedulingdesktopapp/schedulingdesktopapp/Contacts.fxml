@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="500.0" maxWidth="1100.0" minHeight="417.0" minWidth="500.0" prefHeight="417.0" prefWidth="536.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schedulingdesktopapp.controller.ContactsController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <HBox prefHeight="26.0" prefWidth="704.0">
+         <children>
+            <Label text="Contacts">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="298.0" prefWidth="506.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="298.0" prefWidth="484.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="name" prefWidth="147.0" text="Name" />
+                <TableColumn fx:id="email" prefWidth="182.0" text="Email" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionClickMenu" prefHeight="25.0" prefWidth="140.0" text="Main Menu" />
+            <Button mnemonicParsing="false" onAction="#onActionClickOpenRecord" prefHeight="25.0" prefWidth="168.0" text="Open Record/Schedule" translateX="175.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

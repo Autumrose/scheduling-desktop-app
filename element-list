@@ -1,0 +1,7 @@
+module:com.schedulingdesktopapp.schedulingdesktopapp
+com.schedulingdesktopapp
+com.schedulingdesktopapp.application
+com.schedulingdesktopapp.controller
+com.schedulingdesktopapp.dao
+com.schedulingdesktopapp.helper
+com.schedulingdesktopapp.model
