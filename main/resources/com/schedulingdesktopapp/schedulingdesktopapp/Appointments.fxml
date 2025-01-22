@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schedulingdesktopapp.controller.AppointmentsController">
+     <children>
+        <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="1250.0" tabClosingPolicy="UNAVAILABLE" translateY="70.0">
+          <tabs>
+              <Tab fx:id="allTab" onSelectionChanged="#onSelectionAll" text="All">
+                  <content>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1250.0">
+                          <children>
+                              <TableView fx:id="appointmentAllTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1250.0">
+                                  <columns>
+                                      <TableColumn fx:id="idColAll" prefWidth="60.0" text="ID" />
+                                      <TableColumn fx:id="titleColAll" prefWidth="137.0" text="Title" />
+                                      <TableColumn fx:id="descColAll" prefWidth="175.0" text="Description" />
+                                      <TableColumn fx:id="locationColAll" prefWidth="138.0" text="Location" />
+                                      <TableColumn fx:id="contactColAll" prefWidth="130.0" text="Contact" />
+                                      <TableColumn fx:id="typeColAll" prefWidth="100.0" text="Type" />
+                                      <TableColumn fx:id="startDateColAll" prefWidth="85.0" text="Start Date" />
+                                      <TableColumn fx:id="startTimeColAll" prefWidth="75.0" text="Start Time" />
+                                      <TableColumn fx:id="endDateColAll" prefWidth="85.0" text="End Date" />
+                                      <TableColumn fx:id="endTimeColAll" prefWidth="75.0" text="End Time" />
+                                      <TableColumn fx:id="customerIDColAll" minWidth="64.0" text="Customer ID" />
+                                      <TableColumn fx:id="userIDColAll" prefWidth="64.0" text="User ID" />
+                                  </columns>
+                              </TableView>
+                          </children>
+                      </AnchorPane>
+                  </content>
+              </Tab>
+            <Tab fx:id="weekTab" onSelectionChanged="#onSelectionWeek" text="Week">
+              <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1250.0">
+                      <children>
+                          <TableView fx:id="appointmentWeekTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1250.0">
+                              <columns>
+                                  <TableColumn fx:id="idColWeek" prefWidth="60.0" text="ID" />
+                                  <TableColumn fx:id="titleColWeek" prefWidth="137.0" text="Title" />
+                                  <TableColumn fx:id="descColWeek" prefWidth="175.0" text="Description" />
+                                  <TableColumn fx:id="locationColWeek" prefWidth="138.0" text="Location" />
+                                  <TableColumn fx:id="contactColWeek" prefWidth="130.0" text="Contact" />
+                                  <TableColumn fx:id="typeColWeek" prefWidth="100.0" text="Type" />
+                                  <TableColumn fx:id="startDateColWeek" prefWidth="85.0" text="Start Date" />
+                                  <TableColumn fx:id="startTimeColWeek" prefWidth="75.0" text="Start Time" />
+                                  <TableColumn fx:id="endDateColWeek" prefWidth="85.0" text="End Date" />
+                                  <TableColumn fx:id="endTimeColWeek" prefWidth="75.0" text="End Time" />
+                                  <TableColumn fx:id="customerIDColWeek" minWidth="64.0" text="Customer ID" />
+                                  <TableColumn fx:id="userIDColWeek" prefWidth="64.0" text="User ID" />
+                              </columns>
+                          </TableView>
+                      </children>
+                    </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="monthTab" onSelectionChanged="#onSelectionMonth" text="Month">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="15.0" prefWidth="1060.0">
+                       <children>
+                           <TableView fx:id="appointmentMonthTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1250.0">
+                               <columns>
+                                   <TableColumn fx:id="idColMonth" prefWidth="60.0" text="ID" />
+                                   <TableColumn fx:id="titleColMonth" prefWidth="137.0" text="Title" />
+                                   <TableColumn fx:id="descColMonth" prefWidth="175.0" text="Description" />
+                                   <TableColumn fx:id="locationColMonth" prefWidth="138.0" text="Location" />
+                                   <TableColumn fx:id="contactColMonth" prefWidth="130.0" text="Contact" />
+                                   <TableColumn fx:id="typeColMonth" prefWidth="100.0" text="Type" />
+                                   <TableColumn fx:id="startDateColMonth" prefWidth="85.0" text="Start Date" />
+                                   <TableColumn fx:id="startTimeColMonth" prefWidth="75.0" text="Start Time" />
+                                   <TableColumn fx:id="endDateColMonth" prefWidth="85.0" text="End Date" />
+                                   <TableColumn fx:id="endTimeColMonth" prefWidth="75.0" text="End Time" />
+                                   <TableColumn fx:id="customerIDColMonth" minWidth="64.0" text="Customer ID" />
+                                   <TableColumn fx:id="userIDColMonth" prefWidth="64.0" text="User ID" />
+                               </columns>
+                           </TableView>
+                       </children>
+                    </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+        </TabPane>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1080.0" translateY="440.0">
+           <children>
+              <Button mnemonicParsing="false" onAction="#onActionClickMenu" prefHeight="25.0" prefWidth="140.0" text="Main Menu">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Button>
+              <Button layoutX="150.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionClickDeleteAppointment" prefHeight="25.0" prefWidth="140.0" text="Delete Appointment" translateX="790.0" />
+              <Button mnemonicParsing="false" onAction="#onActionClickUpdateAppointment" prefHeight="25.0" prefWidth="140.0" text="Update Appointment" translateX="800.0" />
+              <Button mnemonicParsing="false" onAction="#onActionClickNewAppointment" prefHeight="25.0" prefWidth="140.0" text="New Appointment" translateX="350.0">
+                 <HBox.margin>
+                    <Insets left="10.0" right="10.0" />
+                 </HBox.margin>
+              </Button>
+           </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1080.0" translateX="10.0" translateY="30.0">
+           <children>
+              <Label prefHeight="26.0" prefWidth="147.0" text="Appointments">
+                 <font>
+                    <Font size="17.0" />
+                 </font>
+              </Label>
+            <Button fx:id="previousButton" mnemonicParsing="false" onAction="#onActionClickPrevious" text="Previous" />
+            <Button fx:id="nextButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onActionClickNext" prefWidth="61.0" text="Next">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="currTimeFrame" layoutX="40.0" layoutY="10.0" prefHeight="26.0" prefWidth="186.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+           </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+        </HBox>
+     </children>
+  </AnchorPane>
